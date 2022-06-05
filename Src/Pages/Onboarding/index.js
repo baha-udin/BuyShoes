@@ -50,14 +50,15 @@ const OnBoarding = ({navigation}) => {
           ]}
         />
       </View>
+
       <View style={styles.wrapBottom}>
         <TouchableOpacity
           style={styles.wrapRegister}
           onPress={navigateRegister}>
-          <Text style={styles.textLogin}>Register</Text>
+          <Text style={styles.textLogin}>Addto cart</Text>
         </TouchableOpacity>
         <TouchableOpacity style={styles.wrapCTALogin} onPress={navigateLogin}>
-          <Text style={styles.textLogin}>Login</Text>
+          <Text style={styles.textLogin}>Buy Now</Text>
         </TouchableOpacity>
       </View>
     </View>

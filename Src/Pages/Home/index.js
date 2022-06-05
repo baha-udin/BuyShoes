@@ -42,7 +42,7 @@ const Home = ({navigation}) => {
     },
     {
       name: 'Celana Panjang',
-      icon: Item2,
+      icon: Item3,
       price: 45000,
       description:
         'Halo Sista, Welcome to Modernshoes. Semua sepatu yang ada di store kami asalnya import ya Sis, 100% ORIGINAL. Jadi dijamin untuk kualitas pasti bagus banget, gak akan kecewa deh. Untuk Model yang kami jual pun selalu Up to Date mengikuti tren di Asia Timur, so silahkan dipilih pilih dulu, kalau ada yang mau ditanyakan jangan ragu chat CS kita yang always online. Happy Shopping !',

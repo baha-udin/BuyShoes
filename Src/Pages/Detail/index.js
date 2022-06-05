@@ -7,9 +7,10 @@ import {
   StatusBar,
   Image,
   TouchableOpacity,
+  ScrollView,
 } from 'react-native';
 import {styles} from './style';
-import {Gap, Header} from '../../Components';
+import {Button, Gap, Header} from '../../Components';
 import {Item1, IconNext} from '../../Assets';
 import {Star} from '../../Components';
 
@@ -27,7 +28,7 @@ const Detail = ({route, navigation}) => {
         onBack={() => navigation.navigate('MainMenu', {screen: 'Home'})}
       />
       {/* content */}
-      <View style={styles.wrap}>
+      <ScrollView style={styles.wrap}>
         <View style={styles.cardBanner}>
           <Image source={data.icon} style={styles.imgBanner} />
         </View>
@@ -46,16 +47,23 @@ const Detail = ({route, navigation}) => {
               <Text style={styles.moreReview}> See Review</Text>
             </TouchableOpacity>
           </View>
-          <Gap height={20} />
+          <Gap height={16} />
           <Text style={styles.price}>Rp. {data.price}</Text>
         </View>
-        <Gap height={30} />
+
+        <Gap height={24} />
         {/* See Description */}
-        <TouchableOpacity
-          style={styles.seeDescription}
-          onPress={() => navigation.navigate('Description', data)}>
-          <Text>See Description</Text>
-          <Image source={IconNext} />
+        <View style={styles.wrapDescription}>
+          <Text style={styles.description}>Description:</Text>
+          <Text style={styles.text}>{data.description}</Text>
+        </View>
+      </ScrollView>
+      <View style={styles.wrapBottom}>
+        <TouchableOpacity style={styles.wrapATC}>
+          <Text style={styles.label}>Add to cart</Text>
+        </TouchableOpacity>
+        <TouchableOpacity style={styles.wrapBuy}>
+          <Text style={styles.label}>Buy now</Text>
         </TouchableOpacity>
       </View>
     </View>

@@ -8,6 +8,7 @@ const styles = StyleSheet.create({
     paddingVertical: ResHeight(18),
     justifyContent: 'center',
     alignItems: 'center',
+    paddingHorizontal: 50,
   },
   title: {
     textAlign: 'center',
@@ -15,6 +16,14 @@ const styles = StyleSheet.create({
     fontSize: 16,
     fontWeight: '500',
     letterSpacing: 1,
+  },
+  containerSecond: {
+    backgroundColor: Colors.white,
+    borderRadius: 10,
+    paddingVertical: ResHeight(18),
+    justifyContent: 'center',
+    alignItems: 'center',
+    paddingHorizontal: 50,
   },
 });
 

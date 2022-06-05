@@ -22,6 +22,7 @@ export const Colors = {
     secondary: mainColors.gray,
     purple: mainColors.purple,
     orange: mainColors.orange,
+    black: mainColors.black,
   },
   border: {
     input: mainColors.whiteSmoke,
