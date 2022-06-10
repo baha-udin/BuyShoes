@@ -5,7 +5,6 @@ export const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: 'gray',
-    justifyContent: 'flex-start',
   },
   background: {
     width: '100%',

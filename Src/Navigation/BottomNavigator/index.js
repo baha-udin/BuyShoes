@@ -1,9 +1,10 @@
 import React from 'react';
-import {StyleSheet, Text, View, TouchableOpacity} from 'react-native';
+import {StyleSheet, Text, View, TouchableOpacity, Platform} from 'react-native';
 
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 import {Gap} from '../../Components';
+import {Colors, ResWidth} from '../../Utils';
 
 const Icon = ({label, focus}) => {
   switch (label) {
@@ -90,7 +91,7 @@ const BottomNavigator = ({state, descriptors, navigation}) => {
             style={styles.wrapIcon}>
             <Icon label={label} focus={isFocused} />
             <Gap height={4} />
-            <Text>{label}</Text>
+            <Text style={styles.title}>{label}</Text>
           </TouchableOpacity>
         );
       })}
@@ -106,13 +107,23 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
     alignItems: 'center',
     paddingTop: 14,
-    paddingBottom: 20,
+    paddingBottom: Platform.OS === 'ios' ? 16 : 6,
     paddingHorizontal: 24,
     backgroundColor: 'white',
   },
   wrapIcon: {
     alignItems: 'center',
   },
-  active: {color: 'black', fontSize: 30},
-  inActive: {color: 'black', fontSize: 30},
+  active: {
+    color: 'black',
+    fontSize: Platform.OS == 'ios' ? ResWidth(24) : 20,
+    fontWeight: 'bold',
+  },
+  inActive: {
+    color: 'black',
+    fontSize: Platform.OS == 'ios' ? ResWidth(24) : 20,
+  },
+  title: {
+    color: Colors.text.primary,
+  },
 });

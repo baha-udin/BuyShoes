@@ -11,8 +11,10 @@ const BannerHome = ({navigation, title, description, onPress}) => {
       <View style={styles.wrapText}>
         <Text style={styles.title}>{title}</Text>
         <Text style={styles.description}>{description}</Text>
-        <Gap height={16} />
-        <Button title="Get Now" onPress={onPress} />
+        <Gap height={20} />
+        <TouchableOpacity style={styles.wrapButton} onPress={onPress}>
+          <Text style={styles.title}>{title}</Text>
+        </TouchableOpacity>
       </View>
       <Gap height={14} />
       <View style={styles.wrapImage}>

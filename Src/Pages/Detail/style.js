@@ -7,7 +7,6 @@ export const styles = StyleSheet.create({
     backgroundColor: Colors.white,
   },
   cardBanner: {
-    // marginTop: -50,
     marginHorizontal: 20,
     borderRadius: 15,
     paddingTop: 25,
@@ -65,6 +64,18 @@ export const styles = StyleSheet.create({
     letterSpacing: 0.4,
     lineHeight: 20,
     color: Colors.text.secondary,
+  },
+  moreProducts: {
+    marginHorizontal: 20,
+    marginBottom: 20,
+  },
+  wrapRelated: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    paddingBottom: 16,
+  },
+  seemore: {
+    color: Colors.text.purple,
   },
   wrapBottom: {
     justifyContent: 'space-between',

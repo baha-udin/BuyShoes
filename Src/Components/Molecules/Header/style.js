@@ -12,27 +12,23 @@ export const styles = StyleSheet.create({
   wrapSearch: {
     width: '85%',
     flexDirection: 'row',
+    alignItems: 'center',
+    borderRadius: 8,
+    paddingVertical: Platform.OS === 'ios' ? ResWidth(14) : ResWidth(0),
+    backgroundColor: '#3382D1',
   },
   textInput: {
-    borderRadius: 10,
-    paddingVertical: 14,
-    backgroundColor: '#3382D1',
-    paddingHorizontal: 50,
-    borderColor: 'white',
-    borderWidth: 0.5,
     color: 'white',
     width: '100%',
     fontSize: 15,
+    paddingLeft: 20,
   },
 
   WrapiconSearch: {
-    position: 'absolute',
-    left: ResWidth(18),
-    top: ResHeight(14),
+    paddingLeft: ResWidth(16),
   },
   wrapIcon: {
     width: 50,
-
     height: 50,
     justifyContent: 'center',
     alignItems: 'center',

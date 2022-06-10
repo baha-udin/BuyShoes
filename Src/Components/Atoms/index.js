@@ -6,6 +6,7 @@ import Link from './Link';
 import BannerHome from './BannerHome';
 import CardProduct from './CardProduct';
 import Star from './Star';
+import CardRelatedItems from './CardRelatedItems';
 
 export {
   Star,
@@ -16,4 +17,5 @@ export {
   Link,
   BannerHome,
   CardProduct,
+  CardRelatedItems,
 };

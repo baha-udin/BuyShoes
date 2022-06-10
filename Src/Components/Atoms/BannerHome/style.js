@@ -1,5 +1,5 @@
-import {StyleSheet} from 'react-native';
-import {Colors} from '../../../Utils';
+import {StyleSheet, Platform} from 'react-native';
+import {Colors, ResHeight, ResWidth} from '../../../Utils';
 
 const styles = StyleSheet.create({
   container: {
@@ -26,6 +26,13 @@ const styles = StyleSheet.create({
     fontSize: 12,
     fontWeight: '600',
     color: 'white',
+  },
+  wrapButton: {
+    backgroundColor: Colors.secondary,
+    borderRadius: 10,
+    paddingVertical: Platform.OS === 'ios' ? ResHeight(12) : ResHeight(8),
+    justifyContent: 'center',
+    alignItems: 'center',
   },
   wrapImage: {
     justifyContent: 'center',
