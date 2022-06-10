@@ -65,6 +65,10 @@ const Home = ({navigation}) => {
     }
   };
 
+  useEffect(() => {
+    getData();
+  }, []);
+
   return (
     <View style={styles.container}>
       <StatusBar barStyle="light-content" />
