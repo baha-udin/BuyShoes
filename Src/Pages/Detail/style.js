@@ -11,9 +11,11 @@ export const styles = StyleSheet.create({
     borderRadius: 15,
     paddingTop: 25,
     paddingBottom: 12,
-    backgroundColor: Colors.background.gray,
+    backgroundColor: Colors.white,
     justifyContent: 'center',
     alignItems: 'center',
+    borderColor: Colors.background.gray,
+    borderWidth: 0.2,
   },
   wrapTitle: {
     paddingHorizontal: 30,
@@ -21,7 +23,7 @@ export const styles = StyleSheet.create({
   imgBanner: {
     width: ResHeight(202),
     height: ResHeight(202),
-    resizeMode: 'stretch',
+    resizeMode: 'contain',
   },
   title: {
     fontSize: 20,
@@ -65,6 +67,7 @@ export const styles = StyleSheet.create({
     lineHeight: 20,
     color: Colors.text.secondary,
   },
+  wrapPriceCounter: {flexDirection: 'row', justifyContent: 'space-between'},
   moreProducts: {
     marginHorizontal: 20,
     marginBottom: 20,

@@ -4,7 +4,7 @@ import {Colors, ResHeight, ResWidth} from '../../../Utils';
 export const styles = StyleSheet.create({
   container: {
     flexDirection: 'row',
-    paddingTop: Platform.OS == 'ios' ? 60 : 20,
+    paddingTop: Platform.OS == 'ios' ? 50 : 20,
     justifyContent: 'space-between',
     alignItems: 'center',
     paddingHorizontal: 12,
@@ -42,5 +42,17 @@ export const styles = StyleSheet.create({
     width: 25,
     height: 25,
     resizeMode: 'stretch',
+  },
+  wrapLeft: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    width: '40%',
+  },
+  titleHeader: {
+    fontSize: 20,
+    fontWeight: '400',
+    marginLeft: 8,
+    letterSpacing: 0.8,
+    color: Colors.text.primary,
   },
 });

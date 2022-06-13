@@ -7,8 +7,10 @@ import BannerHome from './BannerHome';
 import CardProduct from './CardProduct';
 import Star from './Star';
 import CardRelatedItems from './CardRelatedItems';
+import Counter from './Counter';
 
 export {
+  Counter,
   Star,
   Gap,
   HeaderTitle,

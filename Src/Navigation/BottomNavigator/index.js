@@ -1,6 +1,5 @@
 import React from 'react';
 import {StyleSheet, Text, View, TouchableOpacity, Platform} from 'react-native';
-
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 import {Gap} from '../../Components';
@@ -19,6 +18,12 @@ const Icon = ({label, focus}) => {
         <Ionicons name="md-cube" style={styles.active} />
       ) : (
         <Ionicons name="md-cube-outline" style={styles.inActive} />
+      );
+    case 'CartPage':
+      return focus ? (
+        <Ionicons name="cart" style={styles.active} />
+      ) : (
+        <Ionicons name="cart-outline" style={styles.inActive} />
       );
     case 'Orders':
       return focus ? (
@@ -125,5 +130,6 @@ const styles = StyleSheet.create({
   },
   title: {
     color: Colors.text.primary,
+    paddingBottom: 6,
   },
 });

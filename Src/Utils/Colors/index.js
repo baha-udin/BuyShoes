@@ -4,12 +4,12 @@ const mainColors = {
   yellow: '#FDC103',
   white: '#ffff',
   black: '#414B5A',
-  gray: '#808080',
   purple: '#B620E0',
-  whiteSmoke: '#DCDCDC',
+  gray3: '#DCDCDC',
   red: 'red',
-  gray2: '#ECEEF0',
+  gray2: '##F3F3F3',
   orange: '#FA6400',
+  whiteSmoke: '#FDFDFD',
 };
 
 export const Colors = {
@@ -25,10 +25,11 @@ export const Colors = {
     black: mainColors.black,
   },
   border: {
-    input: mainColors.whiteSmoke,
+    input: mainColors.gray3,
   },
   error: mainColors.red,
   background: {
     gray: mainColors.gray2,
+    whiteSmoke: mainColors.whiteSmoke,
   },
 };

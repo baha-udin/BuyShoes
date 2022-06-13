@@ -6,6 +6,8 @@ import IconOrder from './Order.png';
 import IconOrderActive from './OrderActive.png';
 import IconProfile from './Profile.png';
 import IconProfileActive from './ProfileActive.png';
+import IconPlus from './iconPlus.png';
+import IconMinus from './iconMinus.png';
 
 export {
   IconHome,
@@ -16,4 +18,6 @@ export {
   IconOrderActive,
   IconProfile,
   IconProfileActive,
+  IconMinus,
+  IconPlus,
 };

@@ -12,6 +12,8 @@ import {
   Orders,
   Detail,
   Description,
+  CartPage,
+  Checkout,
 } from './../Pages';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import BottomNavigator from './BottomNavigator';
@@ -28,6 +30,13 @@ const MainMenu = () => {
         component={Products}
         options={{headerShown: false}}
       />
+
+      <Tab.Screen
+        name="CartPage"
+        component={CartPage}
+        options={{headerShown: false}}
+      />
+
       <Tab.Screen
         name="Orders"
         component={Orders}
@@ -44,7 +53,7 @@ const MainMenu = () => {
 
 const Navigation = () => {
   return (
-    <Stack.Navigator initialRouteName="MainMenu">
+    <Stack.Navigator initialRouteName="Splash">
       <Stack.Screen
         name="MainMenu"
         component={MainMenu}
@@ -75,6 +84,12 @@ const Navigation = () => {
         name="Description"
         component={Description}
         options={{headerShown: false}}
+      />
+
+      <Stack.Screen
+        name="Checkout"
+        component={Checkout}
+        // options={{headerShown: false}}
       />
     </Stack.Navigator>
   );

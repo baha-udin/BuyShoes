@@ -10,13 +10,22 @@ import {
   ScrollView,
 } from 'react-native';
 import {styles} from './style';
-import {Button, CardRelatedItems, Gap, Header} from '../../Components';
+import {Button, CardRelatedItems, Gap, Header, Counter} from '../../Components';
 import {Item1, IconNext, Item3, Item4, Item5} from '../../Assets';
 import {Star} from '../../Components';
 
 const Detail = ({route, navigation}) => {
   const data = route.params;
+  const getData = data;
   const isDarkMode = useColorScheme === 'dark';
+  const [totalItem, setTotalItem] = useState(1);
+  const [dataCheckout, setDataCheckout] = useState({
+    totalItem: totalItem,
+    title: data.title,
+    price: data.price,
+    image: data.image,
+    description: data.description,
+  });
 
   const dataRelated = [
     {
@@ -52,6 +61,18 @@ const Detail = ({route, navigation}) => {
       category: 'shoes',
     },
   ];
+  // function from counter
+  const onCounterChange = value => {
+    setTotalItem(value);
+  };
+
+  const handleCart = () => {
+    navigation.navigate('CartPage', dataCheckout);
+  };
+  const handleBuy = () => {
+    navigation.navigate('Checkout');
+  };
+
   return (
     <View style={styles.container}>
       <StatusBar barStyle={isDarkMode ? 'light-content' : 'dark-content'} />
@@ -66,21 +87,28 @@ const Detail = ({route, navigation}) => {
         </View>
         <Gap height={25} />
         <View style={styles.wrapTitle}>
-          <Text style={styles.title}>{data.name}</Text>
-          <View style={styles.sectionRating}>
-            <View style={styles.wrapStar}>
-              <Star />
-              <Star />
-              <Star />
-              <Star />
-              <Star />
+          <Text style={styles.title}>{data.title}</Text>
+          <View style={styles.wrapPriceCounter}>
+            <View>
+              {/* section Rating */}
+              <View style={styles.sectionRating}>
+                <View style={styles.wrapStar}>
+                  <Star />
+                  <Star />
+                  <Star />
+                  <Star />
+                </View>
+                <TouchableOpacity>
+                  <Text style={styles.moreReview}>See Review</Text>
+                </TouchableOpacity>
+              </View>
+              <Gap height={16} />
+              <Text style={styles.price}>Rp. {data.price}00</Text>
             </View>
-            <TouchableOpacity>
-              <Text style={styles.moreReview}> See Review</Text>
-            </TouchableOpacity>
+            <View>
+              <Counter onValueChange={onCounterChange} />
+            </View>
           </View>
-          <Gap height={16} />
-          <Text style={styles.price}>Rp. {data.price}</Text>
         </View>
 
         <Gap height={24} />
@@ -119,10 +147,10 @@ const Detail = ({route, navigation}) => {
         </View>
       </ScrollView>
       <View style={styles.wrapBottom}>
-        <TouchableOpacity style={styles.wrapATC}>
+        <TouchableOpacity style={styles.wrapATC} onPress={handleCart}>
           <Text style={styles.label}>Add to cart</Text>
         </TouchableOpacity>
-        <TouchableOpacity style={styles.wrapBuy}>
+        <TouchableOpacity style={styles.wrapBuy} onPress={handleBuy}>
           <Text style={styles.label}>Buy now</Text>
         </TouchableOpacity>
       </View>

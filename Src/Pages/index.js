@@ -8,6 +8,8 @@ import Products from './Products';
 import Profile from './Profile';
 import Detail from './Detail';
 import Description from './Description';
+import CartPage from './CartPage';
+import Checkout from './Checkout';
 
 export {
   Description,
@@ -20,4 +22,6 @@ export {
   Products,
   Profile,
   Detail,
+  CartPage,
+  Checkout,
 };
