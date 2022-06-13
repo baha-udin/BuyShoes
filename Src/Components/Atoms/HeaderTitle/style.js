@@ -15,7 +15,7 @@ const styles = StyleSheet.create({
   descPage: {
     fontSize: 15,
     fontWeight: '400',
-    color: Colors.text.secondary,
+    color: Colors.text.primary,
     marginRight: 2,
   },
   wrapCTA: {},

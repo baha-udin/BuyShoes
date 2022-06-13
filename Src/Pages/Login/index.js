@@ -29,7 +29,7 @@ const Login = ({navigation}) => {
         .catch(error => {
           const errorCode = error.code;
           const errorMessage = error.message;
-          console.log(erro);
+          console.log(error);
         });
       navigation.navigate('MainMenu');
       setText('Login now');
