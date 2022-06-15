@@ -53,7 +53,7 @@ const MainMenu = () => {
 
 const Navigation = () => {
   return (
-    <Stack.Navigator initialRouteName="Splash">
+    <Stack.Navigator initialRouteName="MainMenu">
       <Stack.Screen
         name="MainMenu"
         component={MainMenu}
@@ -62,7 +62,7 @@ const Navigation = () => {
       <Stack.Screen
         name="Login"
         component={Login}
-        options={{headerTitle: ''}}
+        options={{headerShown: false}}
       />
       <Stack.Screen name="Register" component={Register} />
       <Stack.Screen
