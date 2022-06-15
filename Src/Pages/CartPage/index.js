@@ -6,14 +6,23 @@ import Feather from 'react-native-vector-icons/Feather';
 
 const CartPage = ({route, navigation}) => {
   const dataCheckout = route.params;
+
+  // state for price
+  const [price, setPrice] = parseInt(dataCheckout.price);
   const [totalItem, setTotalItem] = useState([dataCheckout.totalItem]);
+  const [totalPrice, setTotalPrice] = useState(0);
 
   useEffect(() => {
-    console.log(dataCheckout);
+    // console.log(dataCheckout);
   }, []);
 
   const onCounterChange = () => {
     setTotalItem(+1);
+    handleTotalPrice();
+  };
+
+  const handleTotalPrice = () => {
+    return setTotalPrice(totalItem);
   };
   return (
     <View style={styles.container}>
@@ -51,6 +60,9 @@ const CartPage = ({route, navigation}) => {
               <Counter onValueChange={onCounterChange} />
             </View>
           </View>
+        </View>
+        <View style={styles.wrapTotalPrice}>
+          <Text style={styles.totalPrice}>Total Price: {totalPrice} </Text>
         </View>
       </View>
     </View>

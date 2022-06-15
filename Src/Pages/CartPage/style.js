@@ -18,6 +18,8 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
+    borderWidth: 0.4,
+    borderColor: Colors.border,
   },
   cardLeft: {},
   cardRight: {
@@ -50,6 +52,14 @@ const styles = StyleSheet.create({
     fontSize: 16,
     fontWeight: '400',
     color: Colors.text.primary,
+  },
+  wrapTotalPrice: {
+    marginTop: 24,
+  },
+  totalPrice: {
+    color: Colors.text.primary,
+    fontSize: 15,
+    fontWeight: '600',
   },
 });
 

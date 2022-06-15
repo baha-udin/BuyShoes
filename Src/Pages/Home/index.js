@@ -8,8 +8,9 @@ import {
   StatusBar,
   ScrollView,
   TouchableOpacity,
+  ActivityIndicator,
 } from 'react-native';
-import {fonts, ResWidth, ResHeight} from '../../Utils';
+import {fonts, ResWidth, ResHeight, Colors} from '../../Utils';
 import {
   Header,
   BannerHome,
@@ -23,6 +24,7 @@ import {Item1, Item2, Item3} from './../../Assets';
 
 const Home = ({navigation}) => {
   const [dataAPI, setDataAPI] = useState([]);
+  const [loading, setLoading] = useState(false);
 
   const getData = () => {
     try {
@@ -30,6 +32,7 @@ const Home = ({navigation}) => {
         .then(res => res.json())
         .then(json => {
           setDataAPI(json);
+          setLoading(true);
         });
     } catch (error) {
       console.log('Gagal ambil data');
@@ -67,16 +70,26 @@ which is being hit right now"
             </TouchableOpacity>
           </View>
           <ScrollView horizontal showsHorizontalScrollIndicator={false}>
-            {dataAPI.map((item, index) => {
-              return (
-                <CardProduct
-                  key={index}
-                  image={{uri: item.image}}
-                  title={item.title}
-                  onPress={() => navigation.navigate('Detail', item)}
-                />
-              );
-            })}
+            {loading ? (
+              dataAPI.map((item, index) => {
+                return (
+                  <CardProduct
+                    key={index}
+                    image={{uri: item.image}}
+                    title={item.title}
+                    onPress={() => navigation.navigate('Detail', item)}
+                  />
+                );
+              })
+            ) : (
+              <ActivityIndicator
+                size="small"
+                color={Colors.border}
+                visible={loading}
+                textContent={'Loading...'}
+                textStyle={styles.spinnerTextStyle}
+              />
+            )}
           </ScrollView>
         </View>
         <Gap height={20} />
@@ -92,16 +105,26 @@ which is being hit right now"
             </TouchableOpacity>
           </View>
           <ScrollView horizontal showsHorizontalScrollIndicator={false}>
-            {dataAPI.map((item, index) => {
-              return (
-                <CardProduct
-                  key={index}
-                  image={{uri: item.image}}
-                  title={item.title}
-                  onPress={() => navigation.navigate('Detail', item)}
-                />
-              );
-            })}
+            {loading ? (
+              dataAPI.map((item, index) => {
+                return (
+                  <CardProduct
+                    key={index}
+                    image={{uri: item.image}}
+                    title={item.title}
+                    onPress={() => navigation.navigate('Detail', item)}
+                  />
+                );
+              })
+            ) : (
+              <ActivityIndicator
+                size="small"
+                color={Colors.border}
+                visible={loading}
+                textContent={'Loading...'}
+                textStyle={styles.spinnerTextStyle}
+              />
+            )}
           </ScrollView>
         </View>
         <Gap height={20} />
@@ -117,16 +140,26 @@ which is being hit right now"
             </TouchableOpacity>
           </View>
           <ScrollView horizontal showsHorizontalScrollIndicator={false}>
-            {dataAPI.map((item, index) => {
-              return (
-                <CardProduct
-                  key={index}
-                  image={{uri: item.image}}
-                  title={item.title}
-                  onPress={() => navigation.navigate('Detail', item)}
-                />
-              );
-            })}
+            {loading ? (
+              dataAPI.map((item, index) => {
+                return (
+                  <CardProduct
+                    key={index}
+                    image={{uri: item.image}}
+                    title={item.title}
+                    onPress={() => navigation.navigate('Detail', item)}
+                  />
+                );
+              })
+            ) : (
+              <ActivityIndicator
+                size="small"
+                color={Colors.border}
+                visible={loading}
+                textContent={'Loading...'}
+                textStyle={styles.spinnerTextStyle}
+              />
+            )}
           </ScrollView>
         </View>
         <Gap height={20} />
@@ -141,16 +174,26 @@ which is being hit right now"
             </TouchableOpacity>
           </View>
           <ScrollView horizontal showsHorizontalScrollIndicator={false}>
-            {dataAPI.map((item, index) => {
-              return (
-                <CardProduct
-                  key={index}
-                  image={{uri: item.image}}
-                  title={item.title}
-                  onPress={() => navigation.navigate('Detail', item)}
-                />
-              );
-            })}
+            {loading ? (
+              dataAPI.map((item, index) => {
+                return (
+                  <CardProduct
+                    key={index}
+                    image={{uri: item.image}}
+                    title={item.title}
+                    onPress={() => navigation.navigate('Detail', item)}
+                  />
+                );
+              })
+            ) : (
+              <ActivityIndicator
+                size="small"
+                color={Colors.border}
+                visible={loading}
+                textContent={'Loading...'}
+                textStyle={styles.spinnerTextStyle}
+              />
+            )}
           </ScrollView>
         </View>
         <Gap height={20} />

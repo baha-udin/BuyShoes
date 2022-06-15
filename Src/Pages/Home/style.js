@@ -41,4 +41,8 @@ export const styles = StyleSheet.create({
     letterSpacing: 0.4,
     color: Colors.text.purple,
   },
+  spinnerTextStyle: {
+    textAlign: 'center',
+    justifyContent: 'center',
+  },
 });
