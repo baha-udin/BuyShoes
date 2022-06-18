@@ -17,6 +17,7 @@ import {
   Categories,
   CardProduct,
   Gap,
+  Loading,
 } from './../../Components';
 import {BGHome} from './../../Assets';
 import {styles} from './style';
@@ -82,13 +83,7 @@ which is being hit right now"
                 );
               })
             ) : (
-              <ActivityIndicator
-                size="small"
-                color={Colors.border}
-                visible={loading}
-                textContent={'Loading...'}
-                textStyle={styles.spinnerTextStyle}
-              />
+              <Loading visible={loading} />
             )}
           </ScrollView>
         </View>
@@ -117,13 +112,7 @@ which is being hit right now"
                 );
               })
             ) : (
-              <ActivityIndicator
-                size="small"
-                color={Colors.border}
-                visible={loading}
-                textContent={'Loading...'}
-                textStyle={styles.spinnerTextStyle}
-              />
+              <Loading visible={loading} />
             )}
           </ScrollView>
         </View>
@@ -152,13 +141,7 @@ which is being hit right now"
                 );
               })
             ) : (
-              <ActivityIndicator
-                size="small"
-                color={Colors.border}
-                visible={loading}
-                textContent={'Loading...'}
-                textStyle={styles.spinnerTextStyle}
-              />
+              <Loading visible={loading} />
             )}
           </ScrollView>
         </View>
@@ -186,13 +169,7 @@ which is being hit right now"
                 );
               })
             ) : (
-              <ActivityIndicator
-                size="small"
-                color={Colors.border}
-                visible={loading}
-                textContent={'Loading...'}
-                textStyle={styles.spinnerTextStyle}
-              />
+              <Loading visible={loading} />
             )}
           </ScrollView>
         </View>

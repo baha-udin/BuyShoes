@@ -8,7 +8,7 @@ const CartPage = ({route, navigation}) => {
   const dataCheckout = route.params;
 
   // state for price
-  const [price, setPrice] = parseInt(dataCheckout.price);
+  const [price, setPrice] = dataCheckout.price;
   const [totalItem, setTotalItem] = useState([dataCheckout.totalItem]);
   const [totalPrice, setTotalPrice] = useState(0);
 
@@ -22,7 +22,7 @@ const CartPage = ({route, navigation}) => {
   };
 
   const handleTotalPrice = () => {
-    return setTotalPrice(totalItem);
+    return setTotalPrice(totalItem * parseInt(price));
   };
   return (
     <View style={styles.container}>

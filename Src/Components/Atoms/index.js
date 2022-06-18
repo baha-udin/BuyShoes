@@ -8,6 +8,7 @@ import CardProduct from './CardProduct';
 import Star from './Star';
 import CardRelatedItems from './CardRelatedItems';
 import Counter from './Counter';
+import Loading from './Loading';
 
 export {
   Counter,
@@ -20,4 +21,5 @@ export {
   BannerHome,
   CardProduct,
   CardRelatedItems,
+  Loading,
 };
